@@ -1,0 +1,229 @@
+/** 通用style  **/
+.flexCloumn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.flexCloumnAbsolute {
+  @extend .flexCloumn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.flexMain {
+  -webkit-box-flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.flexBox {
+  display: -webkit-box;
+}
+
+.flex1 {
+  -webkit-box-flex: 1;
+  display: block;
+  width: 100%
+}
+
+.flexContent {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -webkit-box;
+}
+
+.flexLeftContent {
+  -webkit-box-pack: initial;
+  -webkit-box-align: center;
+  display: -webkit-box;
+}
+
+.flexRightContent {
+  -webkit-box-pack: initial;
+  -webkit-box-align: center;
+  display: -webkit-box;
+}
+
+@for $i from 12 through 40 {
+  .font#{$i} {
+    font-size: 1px*$i
+  }
+}
+
+@for $i from 1 through 10 {
+  .width#{$i} {
+    width: 10%*$i;
+    display: block
+  }
+
+  .weight#{$i} {
+    font-weight: 100*$i
+  }
+}
+
+@for $i from 5 through 30 {
+  .margin#{$i} {
+    margin: 1px * $i
+  }
+
+  .padding#{$i} {
+    padding: 1px *$i
+  }
+
+  .marginLeft#{$i} {
+    margin-left: 1px * $i
+  }
+
+  .marginRight#{$i} {
+    margin-right: 1px * $i
+  }
+
+  .marginTop#{$i} {
+    margin-top: 1px * $i
+  }
+
+  .marginBottom#{$i} {
+    margin-bottom: 1px * $i
+  }
+
+  .paddingLeft#{$i} {
+    padding-left: 1px*$i
+  }
+
+  .paddingTop#{$i} {
+    padding-top: 1px*$i
+  }
+
+  .paddingRigth#{$i} {
+    padding-right: 1px*$i
+  }
+
+  .paddingBonttom#{$i} {
+    padding-bottom: 1px*$i
+  }
+}
+
+@for $i from 1 through 3 {
+  .limit#{$i} {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    -webkit-line-clamp: $i;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+  }
+}
+
+.customerForm {
+  .myField {
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+    display: flex;
+    margin-bottom:0;
+    padding-bottom: 22px;
+  }
+
+   [mycol='1'] {
+      width: 100%;
+    }
+    [mycol='2'] {
+      width: 50%;
+    }
+    [mycol='3'] {
+      width: 33.333%;
+    }
+    [mycol='4'] {
+      width: 25%;
+    }
+    .el-form-item__label {
+      display: table-cell;
+      flex: 0 0 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  
+    .el-form-item__content {
+      width: 100%;
+      margin-left: 0!important;
+    }
+.el-date-editor.el-input,
+.el-input-number--medium,
+.el-select,
+.el-cascader,.el-input-number{
+  width: 100%;
+  margin-left: 0 !important;
+}
+  .tinymce{
+    .mce-panel {
+      width: calc(100% - 2px) !important
+    }
+    .mce-btn-group{
+      .mce-btn{
+        float: left;
+      }
+    }
+  }
+}
+
+//占位符
+.occupancy::after {
+  content: 'occupancy';
+  visibility:hidden;
+}
+.designForm {
+  .designFormRequired .el-form-item__label::before {
+    content: '*';
+    color: #f56c6c;
+    margin-right: 4px;
+  }
+}
+
+/* 自定义表单start  */
+.absolute100 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.myCascader {
+  .el-radio__inner {
+    border: 0px;
+    background-color: inherit
+  }
+
+  .el-radio__input.is-checked .el-radio__inner {
+    @extend.absolute100;
+    background: none
+  }
+
+  .el-radio {
+    @extend.absolute100;
+  }
+}
+
+.phantom{
+  pointer-events: none;
+}
+.pointer{
+  cursor: pointer;
+}
+.phantomf5f5f5 {
+  @extend.phantom;
+  background: #f5f5f5;
+}
+
+.myDialog{
+  .el-dialog__body{max-height: calc(70vh - 110px);overflow: auto;}
+  .el-dialog__footer{
+    text-align: center;
+  } 
+}
