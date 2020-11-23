@@ -1,7 +1,7 @@
 # 基于element的自定义表单项目
 
 ### 效果图
-![router-tree](https://github.com/qwe8511066/vantCustomForm/blob/master/public/images/effectPicture.gif?raw=true)<br>
+![router-tree](https://github.com/qwe8511066/elementCustomerForm/blob/master/public/images/effectPicture.gif?raw=true)<br>
 
 ## 参数
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
