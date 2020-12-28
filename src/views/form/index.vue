@@ -5,9 +5,12 @@
         <affix>
           <el-card class="box-card">
             <div slot="header" class="flexBox">
-              <div>组件名称</div>
+              <div class="flex1">组件名称</div>
+              <div>拖拽图标或者点击组件</div>
             </div>
+
             <draggable
+              handle=".el-icon-s-unfold"
               class="dragArea list-group"
               :list="contentList"
               :group="{ name: 'people', pull: 'clone', put: false }"
@@ -19,7 +22,10 @@
                 v-for="(item,index) in contentList"
                 :key="index"
               >
-                <el-button class="contentButton">{{item.label}}</el-button>
+                <el-button @click="addComponent(item)" class="contentButton">
+                  {{item.label}}
+                  <i class="el-icon-s-unfold"></i>
+                </el-button>
               </div>
             </draggable>
           </el-card>
@@ -436,6 +442,11 @@ export default {
           e.controlType == 'checkbox' ? false : '选项' + (e.enum.length + 1),
       }
       e.enum.push(row)
+    },
+
+    //新加组件
+    addComponent(value) {
+      this.data.push(this.cloneDog(value))
     },
 
     //删除项  类似checkbox select radio 这类组件

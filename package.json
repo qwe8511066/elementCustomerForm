@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "easy-affix": "^1.0.8",
     "element-ui": "^2.13.2",
+    "script-ext-html-webpack-plugin": "^2.1.5",
     "vue": "^2.6.11",
     "vue-print-nb": "^1.5.0",
     "vue-router": "^3.2.0",
