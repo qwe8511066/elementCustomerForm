@@ -1,7 +1,7 @@
 # 基于element的自定义表单项目
 
 # 原型 
-**Live demo:** https://qwe8511066.github.io/elementCustomerForm/dist/index.html
+**Live demo:** https://qwe8511066.github.io/elementCustomerForm/dist/#/form/index
 
 
 ### 效果图
