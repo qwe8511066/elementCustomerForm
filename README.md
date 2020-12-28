@@ -1,5 +1,9 @@
 # 基于element的自定义表单项目
 
+# 原型 
+**Live demo:** https://qwe8511066.github.io/elementCustomerForm/dist/index.html
+
+
 ### 效果图
 ![router-tree](https://github.com/qwe8511066/elementCustomerForm/blob/master/public/images/effectPicture.gif?raw=true)<br>
 
